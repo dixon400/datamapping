@@ -8,7 +8,7 @@ const config = {
         port: process.env.MONGODB_LOCAL_PORT
     },
     app: {
-        port: process.env.NODE_LOCAL_PORT
+        port: process.env.NODE_DOCKER_PORT
     }
 }
 

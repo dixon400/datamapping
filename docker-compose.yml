@@ -5,8 +5,6 @@ services:
     image: mongo:latest
     environment:
       MONGO_INITDB_DATABASE: dm_db
-      MONGO_INITDB_ROOT_USERNAME: root
-      MONGO_INITDB_ROOT_PASSWORD: rootpassword
     ports:
       - $MONGODB_LOCAL_PORT:$MONGODB_DOCKER_PORT
     volumes:

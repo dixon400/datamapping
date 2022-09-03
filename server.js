@@ -7,12 +7,13 @@ db
 
 const port = config.app.port;
 const app = express()
+app.use(express.json());
 app.use(router);
+require('./app/routes/index')(app);
 
-
-
-
-
+app.get('/', (req, res)=>{
+    return res.status(200).json("Data mapping is live")
+})
 app.listen(port, ()=>{
     console.log(`Port running on ${port}`);
 })
