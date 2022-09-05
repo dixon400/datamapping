@@ -5,7 +5,6 @@ class ProviderSpecService {
         try {
             const {providerId, fields} = payload;
             const provider = await Provider.findById(providerId);
-            console.log({provider});
 
             if (!provider) {
                 throw new Error("You are not allowed")
@@ -15,7 +14,6 @@ class ProviderSpecService {
             })
             return providerSpec.save()
         } catch (error) {
-            console.log({error});
             return error
         }
     }

@@ -5,7 +5,6 @@ class ProviderSpecController {
         if(!req.body) throw new Error("Please provide a valid data")
 
         const resp = await new ProviderSpecService().createSpec(req.body);
-        console.log({resp});
         if(!resp){
             res.status(400).json("Error storing data")
         }
